@@ -1,0 +1,180 @@
+<section class="content">
+    
+    
+    <script type="text/javascript" src="http://apps.gamonoid.com/icehrm-open-core/web/modules/dist/dashboard.js?v=26.6.0.OS"></script>
+    <div class="span9">
+    
+        <div class="row">
+    
+            <div class="col-lg-3 col-xs-12">
+        <!-- small box -->
+        <div class="small-box bg-red">
+            <div class="inner">
+                <h3>私のプロフィール</h3>
+                <p>
+                    編集詳細
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-ios7-person"></i>
+            </div>
+            <a href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=employees&amp;m=modules_Basic_Information" class="small-box-footer" id="myProfileLink">
+                表示/編集プロフィール <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div><div class="col-lg-3 col-xs-12">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+            <div class="inner">
+                <h3 id="lastPunchTime">
+                    パンチイン
+                </h3>
+                <p>または パンチアウト</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-ios7-alarm-outline"></i>
+            </div>
+            <a href="/punch" class="small-box-footer" id="atteandanceLink">
+                レコード出席 <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div><div class="col-lg-3 col-xs-12">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+            <div class="inner">
+                <h3>10:09</h3>
+                <p>
+                    タイムシートで時間
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-clock"></i>
+            </div>
+            <a href="/attendance" class="small-box-footer" id="timesheetLink">
+                更新タイムシート <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-12">
+        <!-- small box -->
+        <div class="small-box bg-green">
+            <div class="inner">
+                <h3>0</h3>
+                <p>
+                    保留中の休暇
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-calendar"></i>
+            </div>
+            <a href="http://icehrmpro.gamonoid.com/?g=modules&amp;n=leaves&amp;m=modules_Leave_Management" class="small-box-footer" id="leavesLink">
+                休暇ステータスの確認 <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-12">
+        <!-- small box -->
+        <div class="small-box bg-teal">
+            <div class="inner">
+                <h3>私の費用</h3>
+                <p>
+                    管理
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-card"></i>
+            </div>
+            <a href="http://icehrmpro.gamonoid.com/?g=modules&amp;n=expenses&amp;m=modules_Expenses" class="small-box-footer" id="myExpensesLink">
+                経費を管理します <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-12">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+            <div class="inner">
+                <h3>マイプロジェクト</h3>
+                <p>割り当てられたプロジェクト</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="/activity" class="small-box-footer" id="projectsLink">
+                さらに詳しい情報 <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-12">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+            <div class="inner">
+                <h3>マイトラベル</h3>
+                <p>
+                    管理
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-plane"></i>
+            </div>
+            <a href="/travel" class="small-box-footer" id="mytravelLink">
+                トラベルマネージメント <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-12">
+        <!-- small box -->
+        <div class="small-box bg-red">
+            <div class="inner">
+                <h3>お知らせ</h3>
+                <p>
+                    表示
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bullhorn"></i>
+            </div>
+            <a href="http://icehrmpro.gamonoid.com/?g=modules&amp;n=announcements&amp;m=modules_Announcements" class="small-box-footer" id="announcementsLink">
+                ビューのお知らせ <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div><router-outlet></router-outlet></div>
+    
+    
+    
+        </div>
+    
+    </div>
+    <script>
+    var modJsList = new Array();
+    
+    modJsList['tabDashboard'] = new DashboardAdapter('Dashboard','Dashboard');
+    
+    var modJs = modJsList['tabDashboard'];
+    /*
+    $("#employeeLink").attr("href",modJs.getCustomUrl('?g=admin&n=employees&m=admin_Admin'));
+    $("#jobsLink").attr("href",modJs.getCustomUrl('?g=admin&n=jobpositions&m=admin_Recruitment'));
+    $("#candidatesLink").attr("href",modJs.getCustomUrl('?g=admin&n=candidates&m=admin_Recruitment'));
+    $("#projectAdminLink").attr("href",modJs.getCustomUrl('?g=admin&n=projects&m=admin_Admin'));
+    $("#trainingLink").attr("href",modJs.getCustomUrl('?g=admin&n=training&m=admin_Admin'));
+    $("#travelLink").attr("href",modJs.getCustomUrl('?g=admin&n=travel&m=admin_Employees'));
+    $("#documentLink").attr("href",modJs.getCustomUrl('?g=admin&n=documents&m=admin_Employees'));
+    $("#expenseLink").attr("href",modJs.getCustomUrl('?g=admin&n=expenses&m=admin_Employees'));
+    
+    
+    
+    $("#myProfileLink").attr("href",modJs.getCustomUrl('?g=modules&n=employees&m=module_Personal_Information'));
+    $("#atteandanceLink").attr("href",modJs.getCustomUrl('?g=modules&n=attendance&m=module_Time_Management'));
+    $("#leavesLink").attr("href",modJs.getCustomUrl('?g=modules&n=leaves&m=module_Leaves'));
+    $("#timesheetLink").attr("href",modJs.getCustomUrl('?g=modules&n=time_sheets&m=module_Time_Management'));
+    $("#projectsLink").attr("href",modJs.getCustomUrl('?g=modules&n=projects&m=module_Personal_Information'));
+    $("#myDocumentsLink").attr("href",modJs.getCustomUrl('?g=modules&n=documents&m=module_Documents'));
+    $("#mytravelLink").attr("href",modJs.getCustomUrl('?g=modules&n=travel&m=module_Travel_Management'));
+    $("#myExpensesLink").attr("href",modJs.getCustomUrl('?g=modules&n=expenses&m=module_Finance'));
+    
+    modJs.getPunch();
+    modJs.getInitData();
+    */
+    
+    </script>
+    </section><!-- /.content -->

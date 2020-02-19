@@ -1,0 +1,379 @@
+<html style="min-height: 2106px;">
+
+<head>
+    <script>window.ga = [];</script>
+    <meta charset="utf-8">
+    <title>ICE Hrm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://icehrm.s3.amazonaws.com/images/icon16.png">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="http://apps.gamonoid.com/icehrm-open-core/web/dist/third-party.css?v=26.6.0.OS" rel="stylesheet">
+    <script type="text/javascript"
+        src="http://apps.gamonoid.com/icehrm-open-core/web/dist/third-party.js?v=26.6.0.OS"></script>
+
+
+    <script type="text/javascript"
+        src="http://apps.gamonoid.com/icehrm-open-core/web/dist/common.js?v=26.6.0.OS"></script>
+
+    <!-- Can not bundle - Start-->
+    <script src="http://apps.gamonoid.com/icehrm-open-core/web/js/jquery.timepicker.js"></script>
+    <script src="http://apps.gamonoid.com/icehrm-open-core/web/js/bootstrap-datetimepicker.js"></script>
+    <link href="http://apps.gamonoid.com/icehrm-open-core/web/bower_components/flag-icon-css/css/flag-icon.min.css"
+        rel="stylesheet">
+    <!-- Can not bundle - End-->
+
+    <script>
+        var baseUrl = 'http://icehrm-open.gamonoid.com/service.php';
+        var CLIENT_BASE_URL = 'http://icehrm-open.gamonoid.com/';
+    </script>
+
+</head>
+
+<body class="skin-blue  pace-done" data-turbolinks="false" style="min-height: 382px;">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <header id="delegationDiv" class="header">
+        <a href="/"
+            class="logo" style="overflow: hidden;font-family: 'Source Sans Pro', sans-serif;">
+            ホーム </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="logo logoResponsive">
+                ICE Hrm </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown messages-menu" id="notifications">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-tasks"></i>
+
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have no new notifications</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <div class="slimScrollDiv"
+                                    style="position: relative; overflow: hidden; width: auto; height: 320px;">
+                                    <ul class="menu" style="overflow: hidden; width: 100%; height: 320px;">
+                                        <li>
+                                            <a
+                                                href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=time_sheets&amp;m=module_Time_Management#tabEmployeeTimeSheetApproved">
+                                                <div class="pull-left">
+                                                    <img src="http://apps.gamonoid.com/icehrm-open-core/web/images/user_female.png"
+                                                        class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Time Module
+                                                    <small><i class="fa fa-clock-o"></i>&nbsp;<span
+                                                            class="notificationTime"
+                                                            title="Friday, January 24, 2020 at 8:44pm">3 hours
+                                                            ago</span></small>
+                                                </h4>
+                                                <p style="margin-top:10px;">Lala Lamees Approved timesheet<br>from Jan
+                                                    12, 2020 (Sunday) to<br>Jan 18, 2020 (Saturday) </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=time_sheets&amp;m=module_Time_Management#tabEmployeeTimeSheetApproved">
+                                                <div class="pull-left">
+                                                    <img src="http://apps.gamonoid.com/icehrm-open-core/web/images/user_female.png"
+                                                        class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Time Module
+                                                    <small><i class="fa fa-clock-o"></i>&nbsp;<span
+                                                            class="notificationTime"
+                                                            title="Friday, January 24, 2020 at 8:43pm">3 hours
+                                                            ago</span></small>
+                                                </h4>
+                                                <p style="margin-top:10px;">Lala Lamees Approved timesheet<br>from Jan
+                                                    19, 2020 (Sunday) to<br>Jan 25, 2020 (Saturday) </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="slimScrollBar"
+                                        style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 0px; z-index: 99; right: 1px;">
+                                    </div>
+                                    <div class="slimScrollRail"
+                                        style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="footer">
+                                <!--  
+	    <a href="#">See All Messages</a>
+	    -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span><span class="flag-icon flag-icon-jp"
+                                    style="font-size:16px; color:#3498db;"></span></span>
+                        </a>
+                        <ul class="dropdown-menu language-list">
+                            <li>
+                                <a href="#" onclick="updateLanguage('en');return false;">
+                                    <span class="flag-icon flag-icon-gb"></span>
+                                    <b>EN</b></a><a href="#" onclick="updateLanguage('de');return false;">
+                                    <span class="flag-icon flag-icon-de"></span>
+                                    <b>DE</b></a><a href="#" onclick="updateLanguage('fr');return false;">
+                                    <span class="flag-icon flag-icon-fr"></span>
+                                    <b>FR</b></a><a href="#" onclick="updateLanguage('pl');return false;">
+                                    <span class="flag-icon flag-icon-pl"></span>
+                                    <b>PL</b></a><a href="#" onclick="updateLanguage('it');return false;">
+                                    <span class="flag-icon flag-icon-it"></span>
+                                    <b>IT</b></a><a href="#" onclick="updateLanguage('zh');return false;">
+                                    <span class="flag-icon flag-icon-cn"></span>
+                                    <b>ZH</b></a><a href="#" onclick="updateLanguage('ja');return false;">
+                                    <span class="flag-icon flag-icon-jp"></span>
+                                    <b>JA</b></a><a href="#" onclick="updateLanguage('es');return false;">
+                                    <span class="flag-icon flag-icon-es"></span>
+                                    <b>ES</b></a><a href="#" onclick="updateLanguage('fi');return false;">
+                                    <span class="flag-icon flag-icon-fi"></span>
+                                    <b>FI</b></a><a href="#" onclick="updateLanguage('sr');return false;">
+                                    <span class="flag-icon flag-icon-rs"></span>
+                                    <b>SR</b></a><a href="#" onclick="updateLanguage('sv');return false;">
+                                    <span class="flag-icon flag-icon-se"></span>
+                                    <b>SV</b></a><a href="#" onclick="updateLanguage('no');return false;">
+                                    <span class="flag-icon flag-icon-no"></span>
+                                    <b>NO</b></a><a href="#" onclick="updateLanguage('pt');return false;">
+                                    <span class="flag-icon flag-icon-pt"></span>
+                                    <b>PT</b></a><a href="#" onclick="updateLanguage('nl');return false;">
+                                    <span class="flag-icon flag-icon-nl"></span>
+                                    <b>NL</b></a><a href="#" onclick="updateLanguage('ar');return false;">
+                                    <span class="flag-icon flag-icon-ar"></span>
+                                    <b>AR</b></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>Sofia <i class="caret"></i></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header bg-light-blue">
+                                <img src="http://apps.gamonoid.com/icehrm-open-core/web/images/user_female.png"
+                                    class="img-circle" alt="User Image">
+                                <p>
+                                    Sofia O'Sullivan
+
+                                </p>
+                            </li>
+
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=dashboard&amp;m=module_Personal_Information"
+                                        class="btn btn-default btn-flat">プロフィール</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="http://icehrm-open.gamonoid.com/logout.php"
+                                        class="btn btn-default btn-flat">サインアウト</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left active relative" style="min-height: 20306px;">
+        <div id="iceloader" style="
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0);
+        background-image: url('http://apps.gamonoid.com/icehrm-open-core/web/images/icehrm-loader.gif');
+        background-repeat: no-repeat;
+        background-position: center;display:none;"></div>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas" style="min-height: 20306px;">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+        <div class="pull-left image">
+            <img src="http://apps.gamonoid.com/icehrm-open-core/web/images/user_female.png" class="img-circle" alt="User Image" onclick="location.href='http://icehrm-open.gamonoid.com/?g=modules&amp;n=employees&amp;m=module_Personal_Information'" style="cursor: pointer;">
+        </div>
+        <div class="pull-left info">
+            <p><a href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=employees&amp;m=module_Personal_Information">Sofia O'Sullivan</a></p>
+    
+            <a href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=employees&amp;m=module_Personal_Information"><i class="fa fa-circle text-success"></i> ログインして</a>
+        </div>
+    </div>
+    
+                <ul class="sidebar-menu">
+    
+    
+                    
+                    
+                        
+                                                    <li class="treeview" ref="module_Personal_Information">
+                                <a href="#">
+                                    <i class="fa fa-grip-horizontal"></i> <span>個人情報</span>
+                                    <i class="fa pull-right fa-angle-left"></i>
+                                </a>
+    
+                                <ul class="treeview-menu" id="module_Personal_Information" style="display: none;">
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=dashboard&amp;m=module_Personal_Information" style="margin-left: 20px;">
+                                                <i class="fa fa-desktop"></i> ダッシュボード                                        </a>
+                                        </li>
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=employees&amp;m=module_Personal_Information" style="margin-left: 20px;">
+                                                <i class="fa fa-user"></i> 基本情報                                        </a>
+                                        </li>
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=qualifications&amp;m=module_Personal_Information" style="margin-left: 20px;">
+                                                <i class="fa fa-graduation-cap"></i> 資格                                        </a>
+                                        </li>
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=dependents&amp;m=module_Personal_Information" style="margin-left: 20px;">
+                                                <i class="fa fa-expand"></i> 扶養                                        </a>
+                                        </li>
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=emergency_contact&amp;m=module_Personal_Information" style="margin-left: 20px;">
+                                                <i class="fa fa-phone-square"></i> 緊急連絡先                                        </a>
+                                        </li>
+                                                                </ul>
+                            </li>
+                        
+                                                    <li class="treeview" ref="module_Time_Management">
+                                <a href="#">
+                                    <i class="fa fa-hourglass-half"></i> <span>時間管理</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+    
+                                <ul class="treeview-menu" id="module_Time_Management">
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=projects&amp;m=module_Time_Management" style="margin-left: 20px;">
+                                                <i class="fa fa-project-diagram"></i> プロジェクト                                        </a>
+                                        </li>
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=attendance&amp;m=module_Time_Management" style="margin-left: 20px;">
+                                                <i class="fa fa-clock"></i> 出席                                        </a>
+                                        </li>
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=time_sheets&amp;m=module_Time_Management" style="margin-left: 20px;">
+                                                <i class="fa fa-stopwatch"></i> タイムシート                                        </a>
+                                        </li>
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=overtime&amp;m=module_Time_Management" style="margin-left: 20px;">
+                                                <i class="fa fa-calendar-plus"></i> 残業要求                                        </a>
+                                        </li>
+                                                                </ul>
+                            </li>
+                        
+                                                    <li class="treeview" ref="module_Company">
+                                <a href="#">
+                                    <i class="fa fa-building"></i> <span>会社</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+    
+                                <ul class="treeview-menu" id="module_Company">
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=staffdirectory&amp;m=module_Company" style="margin-left: 20px;">
+                                                <i class="fa fa-user"></i> スタッフディレクトリ                                        </a>
+                                        </li>
+                                                                </ul>
+                            </li>
+                        
+                                                    <li class="treeview" ref="module_Travel_Management">
+                                <a href="#">
+                                    <i class="fa fa-globe"></i> <span>トラベルマネージメント</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+    
+                                <ul class="treeview-menu" id="module_Travel_Management">
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=travel&amp;m=module_Travel_Management" style="margin-left: 20px;">
+                                                <i class="fa fa-plane"></i> 旅行                                        </a>
+                                        </li>
+                                                                </ul>
+                            </li>
+                        
+                                                    <li class="treeview" ref="module_Finance">
+                                <a href="#">
+                                    <i class="fa fa-calculator"></i> <span>ファイナンス</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+    
+                                <ul class="treeview-menu" id="module_Finance">
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=loans&amp;m=module_Finance" style="margin-left: 20px;">
+                                                <i class="fa fa-money-check"></i> ローン                                        </a>
+                                        </li>
+                                                                </ul>
+                            </li>
+                        
+                                                    <li class="treeview" ref="module_User_Reports">
+                                <a href="#">
+                                    <i class="fa fa-book-reader"></i> <span>ユーザレポート</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+    
+                                <ul class="treeview-menu" id="module_User_Reports">
+                                                                        <li>
+                                            <a data-turbolinks="true" href="http://icehrm-open.gamonoid.com/?g=modules&amp;n=reports&amp;m=module_User_Reports" style="margin-left: 20px;">
+                                                <i class="fa fa-window-maximize"></i> レポート                                        </a>
+                                        </li>
+                                                                </ul>
+                            </li>
+                        
+                    
+                    
+    
+                    <li>
+                        <div class="user-panel">
+                            <div class="info">
+                                <p></p>
+                            </div>
+                        </div>
+                    </li>
+    
+    
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+    
+        <!-- Right side column. Contains the navbar and content of the page -->
+        <aside class="right-side">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    ダッシュボード                <small>
+                        個人情報&nbsp;&nbsp;
+                    </small>
+                </h1>
+                <a href="#" class="helpLink" target="_blank" style="display:none;color:#f4f4f4;font-size: 2.3rem;float: right;margin-top: -30px;text-shadow: 1px 1px 2px black, 0 0 25px #367fa9, 0 0 5px #367fa9;">
+                    <i class="fa fa-question-circle"></i></a>
+            </section>
+    
+            <router-outlet></router-outlet>
+
+            <!-- Main content -->
+                </aside><!-- /.right-side -->
+            </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.example-h2 {
+    margin: 10px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 10px;
+  }
+  
+  .mat-slider-horizontal {
+    width: 300px;
+  }
+  
+  .mat-slider-vertical {
+    height: 300px;
+  }
+  
+  mat-slider {
+    background-color: lightgray;
+}
+
+#chart > ngx-charts-chart > div > svg > g > g:nth-child(2) {
+  display: none;
+}
+
+span.warning {
+  color: red;
+}
+
+svg.ngx-charts {
+  width: 300px;
+}
+
+mat-slider.total > div > div.mat-slider-track-wrapper > div.mat-slider-track-fill {
+  background-color: #69f0ae !important;
+}
+
+/*
+mat-slider.total > div > div.mat-slider-ticks-container {
+  background-color: green;
+}*/
