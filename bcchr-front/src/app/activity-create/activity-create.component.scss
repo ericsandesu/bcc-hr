@@ -1,0 +1,40 @@
+span.negative {
+    color: red;
+}
+
+div.limiter {
+    position: relative;
+}
+
+/*
+mat-slider.total > div > div.mat-slider-ticks-container {
+    background-color: green;
+}*/
+
+div.limiter > mat-slider > div > div.mat-slider-track-wrapper > div.mat-slider-track-background {
+    background-color: transparent;    
+}
+
+div.limiter > mat-slider {
+    background-color: transparent;
+}
+
+
+div.slider-input {
+    position: absolute; 
+//    margin-left: -550px;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    margin: 3px;
+}
+
+button.save-button {
+    background-color: rgb(90, 164, 84);
+    color: white;
+}

@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Hi {{data.name}}</h1>
+
+<h4>Adding an activity</h4>
+
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Select an activity</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>None</mat-option>
+      <mat-option value="JAP005 - Underwriting">JAP005 - Underwriting</mat-option>
+      <mat-option value="JAP006 - IDP">JAP006 - IDP</mat-option>
+      <mat-option value="JAP007 - Finance">JAP007 - Finance</mat-option>
+    </mat-select>
+  </mat-form-field>  
+  <mat-form-field>
+    <mat-label>Sub activity</mat-label>
+    <mat-select>
+      <mat-option>None</mat-option>
+      <mat-option value="Req">Req</mat-option>
+      <mat-option value="Spec">Spec</mat-option>
+      <mat-option value="Dev">Dev</mat-option>
+      <mat-option value="Others">Others</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="selected" cdkFocusInitial>Ok</button>
+</div>

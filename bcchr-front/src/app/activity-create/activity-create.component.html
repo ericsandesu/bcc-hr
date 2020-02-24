@@ -1,0 +1,48 @@
+<p>activity report</p>
+<p>Working hours: {{ totalTime }} h</p>
+<div>
+    <ngx-charts-pie-grid id=chart [view]="view" [scheme]="colorScheme" [results]="single" (select)="onSelect($event)">
+    </ngx-charts-pie-grid>
+    <span class=warning>{{ errorMessage }}</span>
+</div>
+Remaining: {{ single[1].value }} h
+
+<br><br>
+
+<div> Total
+    <button (click)="resetAll()">0</button>  <button *ngIf="single[0].value!=0" (click)="substractAll()">-</button>
+    <mat-slider class="total" [disabled]=true [invert]="invert" [max]="max" [min]="min" [step]="step" [thumbLabel]=true
+        [tickInterval]="tickInterval" [(ngModel)]="single[0].value" [vertical]="vertical">
+    </mat-slider> <button *ngIf="single[0].value<totalTime" (click)="addAll()">+</button>
+    {{ single[0].value }} hours (max {{ totalTime }} hours)
+    <button *ngIf="single[0].value!=totalTime || (single[0].value==totalTime && isNegative)"
+        (click)="adjustAll()">+/-</button>
+</div>
+<br><br>
+<div *ngFor="let project of projects; let i=index"> <span [className]="projects[i].time<0 ? 'negative' : 'positive'">
+    <button (click)="removeActivity(i)">削除</button> {{project.code}} - {{project.name}} </span>
+    <button (click)="resetProject(i)">0</button>
+    <button *ngIf="project.time!=0" (click)="minus(i)">-</button>
+    <mat-slider class="activity" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step"
+        [thumbLabel]="thumbLabel" [tickInterval]="tickInterval" [(ngModel)]="project.time" [vertical]="vertical"
+        (change)="onChange()">
+    </mat-slider> <button (click)="plus(i)">+</button> {{ project.time }} h
+    <button *ngIf="adjustmentButton[i]" (click)="adjust(i)">+/-</button>
+    <br><br>
+</div>
+<br>
+<!-- button mat-raised-button (click)="openDialog()">Activity追加</button -->
+<button mat-raised-button (click)="openDialog()">Activity追加</button>
+<br>
+<button class=save-button *ngIf="single[0].value==totalTime">保存</button>
+<br>
+<div class=limiter>
+    <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step"
+        [thumbLabel]="thumbLabel" [tickInterval]="tickInterval" [vertical]="vertical" (change)="onChange()">
+    </mat-slider>
+    <div class=slider-input>
+        <mat-slider class="example-margin" [disabled]="disabled" [invert]=true [max]="max" [min]="min" [step]="step"
+            [thumbLabel]="thumbLabel" [tickInterval]="tickInterval" [vertical]="vertical" (change)="onChange()">
+        </mat-slider>
+    </div>
+</div>
