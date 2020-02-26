@@ -1,0 +1,16 @@
+<div id="Attendance" class="reviewBlock" data-content="List" style="padding-left:5px;">
+    <button id="punchButton" style="float:right;" (click)="punchOut()" [disabled]=isPunchOutDisable
+        class="btn btn-small">終業 <span class="icon-time"></span></button> 
+    <button id="punchButton" style="float:left;" (click)="punchIn()" [disabled]=isPunchInDisable
+        class="btn btn-small">始業 <span class="icon-time"></span></button>
+
+</div>
+<br><br><br>
+<div>
+    <div width=50%>
+        {{ lastPunchIn }}
+    </div>
+    <div width=50%>
+        {{lastPunchOut}}
+    </div>
+</div>
