@@ -33,6 +33,7 @@ export class AttendanceComponent implements OnInit {
             this.attendances =  Object.keys(response).map(it => response[it])
             console.log('JSON.parse(JSON.stringify(attendances) ');
             console.log(JSON.stringify(response)); 
+            this.attendances.forEach(this.calculateLength);
 //          this.attendance = Array.of(temp.json());
 /*            for (var key in response) {
               this.attendance.push(response[key])
@@ -40,8 +41,23 @@ export class AttendanceComponent implements OnInit {
           */     }
  //   )
 //    .catch(
-//      (error) => console.log(error)
+//      (error) => console.log(error)\
     );
+  }
+
+  calculateLength(value, index, array) {
+    console.log("punchOut " + array[index].Record.punchOut);
+    if ( array[index].Record.punchOut != "") {
+      var punchOutSplit = array[index].Record.punchOut.split(":");
+      var punchOutTime = new Date(1970, 1, 1, punchOutSplit[0], punchOutSplit[1], punchOutSplit[2], 0);
+      var punchInSplit = array[index].Record.punchIn.split(":");
+      var punchInTime = new Date(1970, 1, 1, punchInSplit[0], punchInSplit[1], punchInSplit[2], 0);
+      var diff: number = punchOutTime.getTime() - punchInTime.getTime();
+      diff = diff / 1000;
+      array[index].Record.timelength = Math.trunc(diff/3600) + ":" + Math.trunc((diff%3600)/60)+ ":" + Math.trunc((diff%60));  
+    } else {
+      array[index].Record.timelength = "";
+    }
   }
 
 }

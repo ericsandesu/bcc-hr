@@ -1,0 +1,75 @@
+<p>Time sheet</p>
+
+<div class="box-body table-responsive">
+    <div id="grid_wrapper" class="dataTables_wrapper form-inline" role="grid">
+        <div class="row">
+            <div class="col-xs-6">
+                <div id="grid_length" class="dataTables_length" style="display: none;"><label><select size="1"
+                            name="grid_length" aria-controls="grid">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select> records per page</label></div>
+            </div>
+            <div class="col-xs-6">
+                <div class="dataTables_filter" id="grid_filter"><label><input type="text" aria-controls="grid"
+                            class="form-control" placeholder="Search"></label></div>
+            </div>
+            <div id="grid_processing" class="dataTables_processing" style="visibility: hidden;">Processing...</div>
+        </div>
+        <table class="table table-bordered table-striped dataTable" id="grid" aria-describedby="grid_info"
+            style="width: 1006px;" cellspacing="0" cellpadding="0" border="0">
+            <thead>
+                <tr role="row">
+                    <th class="header" tabindex="0" rowspan="1" colspan="1" style="width: 208px;"
+                        aria-label="開始日: activate to sort column ascending">開始日</th>
+                    <th class="header" tabindex="0" rowspan="1" colspan="1" style="width: 208px;"
+                        aria-label="終了日: activate to sort column ascending">終了日</th>
+                    <!-- th class="header" tabindex="0" rowspan="1" colspan="1" style="width: 301px;"
+                        aria-label="Total Time: activate to sort column ascending">Total Time</th -->
+                    <th class="header" tabindex="0" rowspan="1" colspan="1" style="width: 155px;"
+                        aria-label="Length: activate to sort column ascending">Length</th>
+                    <th class="header" tabindex="0" rowspan="1" colspan="1" style="width: 155px;"
+                        aria-label="状態: activate to sort column ascending">状態</th>
+                    <th class="center header" tabindex="0" rowspan="1" colspan="1" style="width: 53px;"
+                        aria-label=": activate to sort column ascending"></th>
+                </tr>
+            </thead>
+            <tbody role="alert" aria-live="polite" aria-relevant="all">
+                <tr class="odd" *ngFor="let att of attendances">
+                    <td class="">{{ att.Record.punchIn }}</td>
+                    <td class="">{{ att.Record.punchOut }}</td>
+                    <td> {{ att.Record.timelength }}</td>
+                    <td class="">Submitted </td>
+
+                    <td class="center">
+                        <div style="width:80px;"><img class="tableActionButton"
+                                src="http://apps.gamonoid.com/icehrm-open-core/web/images/edit.png"
+                                style="cursor:pointer;" rel="tooltip" title="Edit Timesheet Entries"
+                                onclick="modJs.edit(2);return false;"><img class="tableActionButton"
+                                src="http://apps.gamonoid.com/icehrm-open-core/web/images/redo.png"
+                                style="cursor:pointer;margin-left:15px;" rel="tooltip"
+                                title="Create previous time sheet"
+                                onclick="modJs.createPreviousTimesheet(2);return false;"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="dataTables_info" id="grid_info">Showing 1 to 1 of 1 entries</div>
+            </div>
+            <div class="col-xs-6">
+                <div class="dataTables_paginate paging_bootstrap pagination">
+                    <ul class="pagination">
+                        <li class="prev disabled"><a href="#">← Previous</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li class="next disabled"><a href="#">Next → </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ attendance }}
