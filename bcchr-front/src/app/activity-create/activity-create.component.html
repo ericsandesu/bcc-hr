@@ -1,5 +1,7 @@
 <p>activity report</p>
 <p>Working hours: {{ totalTime }} h</p>
+
+{{ timeLength }}
 <div>
     <ngx-charts-pie-grid id=chart [view]="view" [scheme]="colorScheme" [results]="single" (select)="onSelect($event)">
     </ngx-charts-pie-grid>

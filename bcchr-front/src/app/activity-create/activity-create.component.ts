@@ -4,6 +4,7 @@ import { single } from './data';
 import { activities } from './master-activity';
 import { Subject } from 'rxjs';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-activity-create',
@@ -25,7 +26,7 @@ export class ActivityCreateComponent implements OnInit {
   adjustmentButton: boolean[];
   activityList : any[];
 
-  totalTime: number = 8.5;
+  totalTime: number;
   autoTicks = false;
   disabled = false;
   invert = false;
@@ -59,7 +60,7 @@ export class ActivityCreateComponent implements OnInit {
     this.update$.next(true);
   }
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private route: ActivatedRoute) {
     Object.assign(this, { single });
     /*   var data = [
          {
@@ -393,6 +394,7 @@ export class ActivityCreateComponent implements OnInit {
 
   ngOnInit() {
     //    single = .value : 5;
+    this.totalTime = +this.route.snapshot.paramMap.get("length");
     this.activityList = activities;
     this.projects = activities;
     console.log("activities count " + this.projects.length + " " + activities.length);
