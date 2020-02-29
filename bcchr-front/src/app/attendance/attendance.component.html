@@ -42,16 +42,16 @@
                     <td class="">{{ att.Record.punchOut }}</td>
                     <td> {{ att.Record.timelength }}</td>
                     <td class="">Submitted </td>
-
                     <td class="center">
-                        <div style="width:80px;"><img class="tableActionButton"
-                                src="http://apps.gamonoid.com/icehrm-open-core/web/images/edit.png"
-                                style="cursor:pointer;" rel="tooltip" title="Edit Timesheet Entries"
-                                onclick="modJs.edit(2);return false;"><img class="tableActionButton"
-                                src="http://apps.gamonoid.com/icehrm-open-core/web/images/redo.png"
-                                style="cursor:pointer;margin-left:15px;" rel="tooltip"
-                                title="Create previous time sheet"
-                                onclick="modJs.createPreviousTimesheet(2);return false;"></div>
+                        <a href="/activity/{{att.Record.timelengthParam}}">
+                            <div style="width:80px;"><img class="tableActionButton"
+                                    src="http://apps.gamonoid.com/icehrm-open-core/web/images/edit.png"
+                                    style="cursor:pointer;" rel="tooltip" title="Edit Timesheet Entries"/><img
+                                    class="tableActionButton"
+                                    src="http://apps.gamonoid.com/icehrm-open-core/web/images/redo.png"
+                                    style="cursor:pointer;margin-left:15px;" rel="tooltip"
+                                    title="Create previous time sheet"/></div>
+                        </a>
                     </td>
                 </tr>
             </tbody>

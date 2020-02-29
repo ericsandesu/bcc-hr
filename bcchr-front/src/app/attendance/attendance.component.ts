@@ -55,6 +55,8 @@ export class AttendanceComponent implements OnInit {
       var diff: number = punchOutTime.getTime() - punchInTime.getTime();
       diff = diff / 1000;
       array[index].Record.timelength = Math.trunc(diff/3600) + ":" + Math.trunc((diff%3600)/60)+ ":" + Math.trunc((diff%60));  
+//      array[index].Record.timelengthParam = Math.trunc(diff/3600) + Math.trunc((diff%3600)/60)%15;  
+array[index].Record.timelengthParam = Math.trunc(diff/3600) + Math.trunc(Math.trunc((diff%3600)/60)/15)/4;
     } else {
       array[index].Record.timelength = "";
     }
